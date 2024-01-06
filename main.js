@@ -1,8 +1,6 @@
-const sayHello = require('./hello')
+const hello = require('./hello')
+const semaSasa =('')
 console.log("The dir name", __dirname);
 console.log("The  file name",__filename);
-
-global.myVAr = "New var"
-console.log(globalThis)
-sayHello("VAlentine")
-sayHello("shayne")
+hello.sayHello("VAlentine")
+hello.semaSasa("shayne")

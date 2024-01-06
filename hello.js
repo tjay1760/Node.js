@@ -1,7 +1,8 @@
+
 const sayHello = (name) =>{
     console.log(`hello ${name}`);
 }
 const semaSasa = (name) =>{
     console.log(`sema ${name}`)
 }
-module.exports = {sayHello:sayHello, semaSasa:semaSasa}
+module.exports = {sayHello, semaSasa}

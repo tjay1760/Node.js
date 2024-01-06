@@ -31,6 +31,10 @@ const data = '\n My first node redone again'
 // })
 fs.rename('./testfolder/newtext.txt', './testfolder/newtext1.txt',
 (err)=>{
-    err? console.log(err):console.log("Rename Succesfull")
+    err? console.log(err.code):console.log("Rename Succesfull")
 }
 )
+fs.unlink('./testfolder/Synctest',
+(err)=>{
+    err?console.log(err.code):console.log("DElete succesful")
+})

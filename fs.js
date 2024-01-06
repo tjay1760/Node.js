@@ -1,5 +1,5 @@
 const fs = require ('fs');
-const data = 'My first node redone again'
+const data = '\n My first node redone again'
 
 fs.mkdir('./testfolder', 
 (err) => {
@@ -7,8 +7,13 @@ fs.mkdir('./testfolder',
 
 }
 )
-fs.writeFile('./testfolder/test.txt', data,
+fs.writeFile('./testfolder/test.txt', data,{flag:'a'},
 (err)=>{
     err? console.log(err.code): console.log("Write succesfull")
+}
+)
+fs.readFile('./testfolder/test.txt', {encoding:'utf8'},
+(err, data)=>{
+    err? console.log(err.code): console.log(`The file has \n ${data}`)
 }
 )

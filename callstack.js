@@ -1,7 +1,7 @@
 console.log("hi");
 
 let x = 1000000000;
-
+// event loop practice
 console.time("For Loop Time");  // Start timer
 
 for (let i = 0; i <= x; i++) {

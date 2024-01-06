@@ -26,6 +26,11 @@ const data = '\n My first node redone again'
 //     console.log(err.code)
 
 // }
-fs.readdir('./testfolder',(err, data)=>{
-err? console.log(err.code): console.log(`Your files ${data}`)
-})
+// fs.readdir('./testfolder',(err, data)=>{
+// err? console.log(err.code): console.log(`Your files ${data}`)
+// })
+fs.rename('./testfolder/newtext.txt', './testfolder/newtext1.txt',
+(err)=>{
+    err? console.log(err):console.log("Rename Succesfull")
+}
+)

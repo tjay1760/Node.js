@@ -10,4 +10,4 @@ const welcomeUser2 = () =>{
 myEmmiter.on('welcomer', welcomeUser)
 myEmmiter.on('welcomer', welcomeUser2)
 
-myEmmiter.emit('welcomer')
+myEmmiter.emit('welcomer', 'shayne')

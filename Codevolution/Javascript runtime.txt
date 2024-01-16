@@ -24,3 +24,7 @@ Modules in Node
 - local
 - Built-in
 - Third Party (written by other devs)
+
+The code is the same due to IIFE
+In IFFE each variable has its own scope
+

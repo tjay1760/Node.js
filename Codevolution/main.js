@@ -1,3 +1,5 @@
 const sum = require('./add')
+require ('./batman')
+require('./superman')
 console.log("Hello world from index.js")
-console.log(sum.add(2,4))
+console.log(sum(2,4))

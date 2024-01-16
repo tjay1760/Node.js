@@ -27,4 +27,14 @@ Modules in Node
 
 The code is the same due to IIFE
 In IFFE each variable has its own scope
-
+BEfore execution a mudule is treated like an IIFE
+This allows for encapsulation and reusability
+//Module wrapper
+The module wraper is used to covert the module code into an IIFE
+thus a module looks like This
+(
+    function(exports, require, module, __filename, __dirname){
+        module code
+    }
+)
+the variables in the module wrapper are usually injected during execution by node

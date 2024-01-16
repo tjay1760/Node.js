@@ -2,3 +2,15 @@ chrome comprises of
 --> JS engine (has the call stac and the memory to store variables)
 --> Browser APIs (These include the DOM local storage, timer fxns, and promises )
 --> Event Loop (ensures that tasks are executed in the correct order)
+What is node js
+- Allows use of javascript  outside the Browser
+What can you build with node js
+ - APIs
+ -CMD tools
+ - Multiplayer tools
+ - Streaming services
+ - Backend services
+ - Real time applications
+Node JS is comprises a JS library, built with C++ and has various dependencies
+Does not have acess to the web API unlike the JS runtime
+window and document objects cannot be found in the library

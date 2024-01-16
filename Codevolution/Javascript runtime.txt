@@ -20,4 +20,7 @@ difference between Browser and node
 no modules in Browser
 Browser APIs are noot available in node
 Node.js has more freedom for dev
- 
+Modules in Node
+- local
+- Built-in
+- Third Party (written by other devs)

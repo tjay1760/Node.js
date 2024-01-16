@@ -1,0 +1,4 @@
+chrome comprises of 
+--> JS engine (has the call stac and the memory to store variables)
+--> Browser APIs (These include the DOM local storage, timer fxns, and promises )
+--> Event Loop (ensures that tasks are executed in the correct order)

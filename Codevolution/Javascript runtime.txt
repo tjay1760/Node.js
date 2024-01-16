@@ -37,4 +37,6 @@ thus a module looks like This
         module code
     }
 )
-the variables in the module wrapper are usually injected during execution by node
+the variables in the module wrapper are usually injected during execution by 
+in the code the value of superhero is superman even if the exported value is batman because of module caching.
+Module caching can be used to refere to the situation where a module is saved with its

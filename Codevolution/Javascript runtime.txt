@@ -14,3 +14,5 @@ What can you build with node js
 Node JS is comprises a JS library, built with C++ and has various dependencies
 Does not have acess to the web API unlike the JS runtime
 window and document objects cannot be found in the library
+NODE REPL is the JS Read Evaluate Print Loop
+similar to the rails console

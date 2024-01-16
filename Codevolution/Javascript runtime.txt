@@ -16,3 +16,8 @@ Does not have acess to the web API unlike the JS runtime
 window and document objects cannot be found in the library
 NODE REPL is the JS Read Evaluate Print Loop
 similar to the rails console
+difference between Browser and node
+no modules in Browser
+Browser APIs are noot available in node
+Node.js has more freedom for dev
+ 

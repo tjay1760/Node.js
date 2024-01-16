@@ -9,4 +9,4 @@ return this.name
 this.name = name;
     }
 }
-module.exports = new SuperHero('Batman')
+module.exports = SuperHero

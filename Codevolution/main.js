@@ -1,10 +1,7 @@
-const supeHero = require('./supeHero')
 const SuperHero = require ('./supeHero')
+const myhero = new SuperHero('Batman')
 console.log(SuperHero)
-console.log(SuperHero.name)
-SuperHero.setName('Superman')
-console.log(SuperHero.name)
-
-const newSuperHero = require('./supeHero')
-console.log(newSuperHero.name)
+console.log(myhero.name)
+myhero.setName('Superman')
+console.log(myhero.name)
 

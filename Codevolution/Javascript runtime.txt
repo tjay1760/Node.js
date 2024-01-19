@@ -47,4 +47,10 @@ the module.exports tells which parts to exported
 imorting is done using common JSES modules are a new version 
 no module system when node was created
 ES6 created a standard module system on 2006
+The eky modules in node are
+-- path - provides utilities for working with directories
+-- Event
+-- http
+-- fx
+-- stream
 

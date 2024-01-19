@@ -1,5 +1,6 @@
 const math = require('./math')
-resadd = math.add (1,2)
-ressub = math.subtract(1,2)
+const {add,subtract} = math;
+resadd = add (1,2)
+ressub = subtract(1,2)
 console.log(resadd)
 console.log(ressub)

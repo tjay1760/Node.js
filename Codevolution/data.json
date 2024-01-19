@@ -1,0 +1,8 @@
+{
+    "name": "Bruce Wayne",
+    "House": "WAyne MAnor",
+    "address": {
+        "street": "fort",
+        "city": "wayne"
+    }
+}

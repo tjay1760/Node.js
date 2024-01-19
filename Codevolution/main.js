@@ -1,7 +1,5 @@
-const SuperHero = require ('./supeHero')
-const myhero = new SuperHero('Batman')
-console.log(SuperHero)
-console.log(myhero.name)
-myhero.setName('Superman')
-console.log(myhero.name)
-
+const math = require('./math')
+resadd = math.add (1,2)
+ressub = math.subtract(1,2)
+console.log(resadd)
+console.log(ressub)

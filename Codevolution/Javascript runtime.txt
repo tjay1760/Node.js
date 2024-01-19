@@ -41,4 +41,10 @@ the variables in the module wrapper are usually injected during execution by
 in the code the value of superhero is superman even if the exported value is batman because of module caching.
 Module caching can be used to refere to the situation where a module is saved with its
 When one object is assign to the other in JS both point to the same addres in memory thus the observed effect
+Common JS
+Each file is treated as a module
+the module.exports tells which parts to exported
+imorting is done using common JSES modules are a new version 
+no module system when node was created
+ES6 created a standard module system on 2006
 

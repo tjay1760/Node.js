@@ -1,14 +1,7 @@
-const eventEmmitter = require('events')
-const emmiter = new eventEmmitter()
-// listen to the emmiter
-emmiter.on("order-pizza", (a,b)=>{
-    console.log(`A ${a} and ${b} pizza ordered`)
+const pizzaShop = require('./pizzaShop')
+mypizzashop = new pizzaShop();
+mypizzashop.on("order", (size,topping)=>{
+    console.log(`Your pizza is ${size} with ${topping} toppings `)
 })
-emmiter.on("bake-pizza",(a,b)=>{
-    console.log(`Baking ${a} and ${b} pizza`)
-})
-// broadcasting event
-console.log("Starting pizza process")
-emmiter.emit('order-pizza', "large", "pinapple")
-console.log("Starting baking pizza process")
-emmiter.emit('bake-pizza', "large", "pinapple")
+mypizzashop.order("Large", "Pinapple")
+mypizzashop.display() 

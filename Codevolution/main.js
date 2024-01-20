@@ -8,3 +8,4 @@ mypizzashop.on("order", (size,topping)=>{
 })
 mypizzashop.order("Large", "Pinapple")
 mypizzashop.display() 
+console.log("𖩨".charCodeAt())

@@ -62,3 +62,16 @@ These are common in JS where some one if fetching data from a file, database, or
 Event module allows as to work with events in javascript
 Event refers to an action that happened in the application that one can reply to
 Events module also allows us to dispatch custom events ad respond to them in a non blocking manner
+AS seen in the use of different pizza and drink classes is that it is possible to used different classes without tight coupling
+Character sets
+encoding
+Async JS
+Streams and buffers
+characters are fist converted to numbers then to their respective binary representation
+character sets --> predefined character list rep by nums 
+most common are unicode and ASCII
+Character encoding --> describes how to represent as binary befor being stored into a computer
+How many bits to be used to represent a number
+Example is uTF-8 which sipulate that characters should be repped in bytes(in this case 8 bits to make a byte)
+Thus in the case of 4 --> binary 100 --> unicode --> 00000100 
+There are also guidlines on the storage of images and videos in binary format

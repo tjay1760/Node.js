@@ -9,4 +9,4 @@ emmiter.on("bake-pizza",(a,b)=>{
 })
 // broadcasting event
 emmiter.emit('order-pizza', "large", "pinapple")
-// emmiter.emit('bake-pizza', "large", "pinapple")
+emmiter.emit('bake-pizza', "large", "pinapple")

@@ -55,3 +55,10 @@ The eky modules in node are
 -- stream
 Callbacks in node
 --> Used where functions can be used as arguments and can also be returned 
+there are two types of Callbacks
+--> Synchrounous - this is executed imidiately it is called such as the ones passed to the array methods sort map and filter methods.
+and asynchrounous - used to resume code execution after an asynchrounous operation completes 
+These are common in JS where some one if fetching data from a file, database, or making a network request
+Event module allows as to work with events in javascript
+Event refers to an action that happened in the application that one can reply to
+Events module also allows us to dispatch custom events ad respond to them in a non blocking manner

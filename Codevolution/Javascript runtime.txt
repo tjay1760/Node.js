@@ -75,3 +75,23 @@ How many bits to be used to represent a number
 Example is uTF-8 which sipulate that characters should be repped in bytes(in this case 8 bits to make a byte)
 Thus in the case of 4 --> binary 100 --> unicode --> 00000100 
 There are also guidlines on the storage of images and videos in binary format
+Streams --> refers to data being moved from one point to the other
+can bee within the computer, across internets and intranets
+Node JS processes data in chunks and not waited to be wholly available
+eg as when a video can be watched even if it is not fuully downloaded
+Using chunks helps prevent unecessary downloads and ensuring that the data arrives in time
+This helps prevent unecessary data downloads and memory use
+buffers
+It the wait zone that has a definite minimum and maximum data to be sent/processeed
+Simply it a small area of the runtime that is maintained to process that data stream
+For intance when the internet connection is fast the data stream will fill the buffer faster
+The loading spiner on a video shows that it is waiting for more data to full the buffer so that it can send it
+Buffer have limited memory thus when writing to the buffer only the characters that match the length will be written in the buffer
+Buffers form the foundation for which node works
+Asynch JS
+JS is blocking and single threaded in its simplest form
+A single thread can only handle one task at a time
+New pieces beyond JS are required to write Asynch code
+Browsers help that for the front-end and browsers for the backend
+The browser and Node helps create functions that are invonked asynchronously when an event occurs
+e.g in setTimeouts, event listeners, callbacks, promises 

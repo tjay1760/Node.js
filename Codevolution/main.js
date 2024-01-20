@@ -1,15 +1,9 @@
-const path = require('path')
-console.log(path.basename(__filename))
-console.log(path.basename(__dirname))
-console.log(path.extname(__filename))
-console.log(path.extname(__dirname))
-console.log(path.parse(__filename).name)
-console.log(path.parse(__dirname).name)
-console.log(path.isAbsolute(__filename))
-console.log(path.isAbsolute(__dirname))
-console.log(path.join(__dirname,__filename))
-console.log(path.resolve(__dirname,__filename))
-console.log(path.resolve("folder"))
-console.log(path.resolve("/folder"))
-console.log(path.resolve("../folder"))
+function greet (name){
+    console.log(`Hello there im ${name}`)
+}
+function greetme(greetFn){
+    const name = "Tjay"
+    greetFn(name)
+}
 
+greetme(greet)

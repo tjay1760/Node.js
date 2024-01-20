@@ -53,4 +53,5 @@ The eky modules in node are
 -- http
 -- fx
 -- stream
-
+Callbacks in node
+--> Used where functions can be used as arguments and can also be returned 

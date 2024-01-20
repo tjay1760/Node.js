@@ -8,5 +8,7 @@ emmiter.on("bake-pizza",(a,b)=>{
     console.log(`Baking ${a} and ${b} pizza`)
 })
 // broadcasting event
+console.log("Starting pizza process")
 emmiter.emit('order-pizza', "large", "pinapple")
+console.log("Starting baking pizza process")
 emmiter.emit('bake-pizza', "large", "pinapple")

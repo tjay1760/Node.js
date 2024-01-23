@@ -1,5 +1,5 @@
 const fs = require("fs");
-const readableStream = fs.createReadStream("./streams.txt",{encoding:"utf8"})
+const readableStream = fs.createReadStream("./streams.txt",{encoding:"utf8",highWaterMark:2})
 const writablestream = fs.createWriteStream("./streamswrite.txt",{encoding:"utf-8"})
 readableStream.on("data",(chunk)=>{
 console.log(chunk)

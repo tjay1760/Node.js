@@ -97,3 +97,10 @@ The browser and Node helps create functions that are invonked asynchronously whe
 e.g in setTimeouts, event listeners, callbacks, promises 
 the FS module
 Streams and pipes
+Although it works the same ase the read file the streaming wors best when working with big files
+with big files files can be streams in chaunks while copying to a new file
+Types of streams
+--> readable streams for reading files
+--> writable streams where we write
+--> Duplex streams that are both writable and readable
+--> Transform streams that allow for reading and writing of data as it is being read

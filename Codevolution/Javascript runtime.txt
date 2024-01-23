@@ -51,7 +51,7 @@ The eky modules in node are
 -- path - provides utilities for working with directories
 -- Event
 -- http
--- fx
+-- fs
 -- stream
 Callbacks in node
 --> Used where functions can be used as arguments and can also be returned 
@@ -107,3 +107,19 @@ Types of streams
 Pipes
 used to connect readable streams to writable streams 
 Pipes allow chaining, However the destination stream must be readable dublex or transfom stream
+http
+How web works
+Internet is comprised of clients and servers
+clients include devices such as phones and browsers and their associated tools such as browsers
+Servers are the stores of pages, websites, and web applications
+when the start a request is sent from C->Servers
+Server returns a response to be displayed in teh browser
+HTTP defines the protocol for communication between the client and the servers
+client --> HTTP request
+sserver --> HTTP response
+Node is used to create the web server
+Node can allso acess os functionalities such as networing
+Node event loop allows for the perfomance of a high volume of requests
+node server should respect the http protocol
+the creation of the http module allows for the creation of a server that can transfer data over http
+

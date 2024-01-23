@@ -1,8 +1,13 @@
 const http = require('http')
 const server = http.createServer(
     (req,res)=>{
-res.writeHead(200, {"Content-Type":"text/plain"})
-res.end("HEllo World")
+const superHero = {
+    firstname:"Bruce",
+    secondName:"Wayne"
+}
+payload = JSON.stringify(superHero)
+res.writeHead(200, {"Content-Type":"application/json"})
+res.end(payload)
     }
 )
 server.listen(5000,()=>{

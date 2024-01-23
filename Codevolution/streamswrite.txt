@@ -1,1 +1,1 @@
-my streamed data
+my streamed data with pipe

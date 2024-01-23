@@ -100,7 +100,9 @@ Streams and pipes
 Although it works the same ase the read file the streaming wors best when working with big files
 with big files files can be streams in chaunks while copying to a new file
 Types of streams
---> readable streams for reading files
---> writable streams where we write
---> Duplex streams that are both writable and readable
---> Transform streams that allow for reading and writing of data as it is being read
+--> readable streams for reading files (readable stream)
+--> writable streams where we write (writable stream)
+--> Duplex streams that are both writable and readable (sockets)
+--> Transform streams that allow for reading and writing of data as it is being read (file compression)
+Pipes
+used to connect readable streams to writable streams 

@@ -96,3 +96,4 @@ Browsers help that for the front-end and browsers for the backend
 The browser and Node helps create functions that are invonked asynchronously when an event occurs
 e.g in setTimeouts, event listeners, callbacks, promises 
 the FS module
+Streams and pipes

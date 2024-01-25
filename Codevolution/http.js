@@ -2,8 +2,11 @@ const http = require('http')
 const fs = require('fs')
 const server = http.createServer(
     (req,res)=>{
+        const name = "Tjay"
         res.writeHead(200,{"Content-type":"text/html"})
-fs.createReadStream("./index.html","utf-8").pipe(res)
+let html = fs.readFileSync("./index.html","utf-8")
+html = html.replace("{{name}}",name)
+res.end(html)
     }
 )
 server.listen(5000,()=>{

@@ -2,14 +2,8 @@ const http = require('http')
 const fs = require('fs')
 const server = http.createServer(
     (req,res)=>{
-        const html = fs.readFileSync("./index.html","utf-8")
-const superHero = {
-    firstname:"Bruce",
-    secondName:"Wayne"
-}
-payload = JSON.stringify(superHero)
-res.writeHead(200, {"Content-Type":"text/html"})
-res.end(html)
+        res.writeHead(200,{"Content-type":"text/html"})
+fs.createReadStream("./index.html","utf-8").pipe(res)
     }
 )
 server.listen(5000,()=>{

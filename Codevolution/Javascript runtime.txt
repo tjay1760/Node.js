@@ -122,4 +122,5 @@ Node can allso acess os functionalities such as networing
 Node event loop allows for the perfomance of a high volume of requests
 node server should respect the http protocol
 the creation of the http module allows for the creation of a server that can transfer data over http
+using file streams leads to better usage of memory
 

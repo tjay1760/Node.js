@@ -6,8 +6,8 @@ const superHero = {
     secondName:"Wayne"
 }
 payload = JSON.stringify(superHero)
-res.writeHead(200, {"Content-Type":"application/json"})
-res.end(payload)
+res.writeHead(200, {"Content-Type":"text/html"})
+res.end("<h1>Niaje hapo leo</h1>")
     }
 )
 server.listen(5000,()=>{

@@ -6,7 +6,7 @@ const server = http.createServer(
         res.writeHead(200,{"Content-type":"text/html"})
 let html = fs.readFileSync("./index.html","utf-8")
 html = html.replace("{{name}}",name)
-res.end(html)
+req.url==="/"?res.end(html):res.end("Invalid request")
     }
 )
 server.listen(5000,()=>{

@@ -169,5 +169,7 @@ A design pattern that cordinates the execution of asynchronous node.js code
      Execution of tasks in the microtask queue if present
      if there are any more callbacks the process is repeated
 
-
+Microtasks
+The process.nextTick method is used to add CB to the nextTick queue
+promise ques can be added with the promise.resolve.then((CB function)) method
 

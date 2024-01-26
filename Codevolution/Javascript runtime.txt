@@ -172,4 +172,10 @@ A design pattern that cordinates the execution of asynchronous node.js code
 Microtasks
 The process.nextTick method is used to add CB to the nextTick queue
 promise ques can be added with the promise.resolve.then((CB function)) method
+use of process.nextick is discouraged as it may cause the rest of the event loop to starve
+the prog may live in the microtask queue
+when to use process.nextTick
+error handling, reasource cleanup, retry request
+
+
 

@@ -123,4 +123,12 @@ Node event loop allows for the perfomance of a high volume of requests
 node server should respect the http protocol
 the creation of the http module allows for the creation of a server that can transfer data over http
 using file streams leads to better usage of memory
+Framewors such as react, angular and vue try to abstract lower lever code maing work easier
+express nest happi and oa help one from directly interacting with the http module
+they are build on top of the http module 
+libuv--> cross platform library written in Callbacks
+used to handle asynchronous non-blocing operations
+It achieves them using the thread pool and event loop
+Thread pool
+
 

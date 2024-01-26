@@ -135,4 +135,39 @@ ashycronous threads are made to run synchronously on separate threads but appear
 Libuv has 5 threads. thus when more that five threads are running concurrently the fifth one has to wait for an empty thread
 The perfomance of the application is improved by increasing the thread pool size
 however this is limited to the number of cpu cores available in the computer
+==> Observations from the code
+--> Although crypto.pbkdf2 and http.request are asynchronous http request does not use the thread pool
+--> Http request is not affected by the number of CPU cores
+--> this is because https.request is network operation not a cpu bound operation
+--> In this case libUV is involved in the assigning of the OS work to the kernel and polling the kernel to see if the task was completed
+libuv handles methods asynch request through
+-- Native mechanism
+-- Thread pool
+--> To avoid blocing the ain thread libuv tends to prefer native async mechanisms
+--> Each kernel has different mechanisms
+This helps make node scalable whereby the OS is the only limiting factor
+--> The thread pool is usually used whereby there is no native support this help preventing the blocing of the
+main thread
+The thread pool can be a problem where aall the threads are busy
+JS Event Loop
+Node js comprises of the v8 engine and the libuv
+The v8 engine has the memory heap and call stack
+program exxecutions starts with global which is put into the stack
+functions are added to the stack and removed once they have been excecuted
+The Event loop is a C program that is part of of the libuv
+A design pattern that cordinates the execution of asynchronous node.js code
+--> Excecution order
+-Execution of microtask queue
+    - 1st in the nextTick then next in the promise queue
+    - execution of callbacs in the timer queue
+    - Execution of tasks in the microtask queue if present
+    - execution of callbcks in the microtask queues
+    - Execution of tasks in the microtask queue if present
+    - excecution of callbacks in the check queue
+    - Execution of tasks in the microtask queue if present
+    xecution fo callbacks in the close queue
+     Execution of tasks in the microtask queue if present
+     if there are any more callbacks the process is repeated
+
+
 

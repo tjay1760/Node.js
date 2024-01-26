@@ -131,5 +131,6 @@ used to handle asynchronous non-blocing operations
 It achieves them using the thread pool and event loop
 Thread pool
 Every method in node that runs with the sync suffix is usually on the main thred thus blocks other operations
+ashycronous threads are made to run synchronously on separate threads but appear to be running synchronously to the main thread
 
 

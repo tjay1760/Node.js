@@ -132,5 +132,7 @@ It achieves them using the thread pool and event loop
 Thread pool
 Every method in node that runs with the sync suffix is usually on the main thred thus blocks other operations
 ashycronous threads are made to run synchronously on separate threads but appear to be running synchronously to the main thread
-
+Libuv has 5 threads. thus when more that five threads are running concurrently the fifth one has to wait for an empty thread
+The perfomance of the application is improved by increasing the thread pool size
+however this is limited to the number of cpu cores available in the computer
 

@@ -130,5 +130,6 @@ libuv--> cross platform library written in Callbacks
 used to handle asynchronous non-blocing operations
 It achieves them using the thread pool and event loop
 Thread pool
+Every method in node that runs with the sync suffix is usually on the main thred thus blocks other operations
 
 

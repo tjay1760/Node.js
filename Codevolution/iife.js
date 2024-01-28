@@ -7,3 +7,6 @@
     console.log(message, SuperHero)
 })("Bonjour");
 
+const print = console.log
+print("ME")
+

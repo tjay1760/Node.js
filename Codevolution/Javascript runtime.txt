@@ -176,6 +176,10 @@ use of process.nextick is discouraged as it may cause the rest of the event loop
 the prog may live in the microtask queue
 when to use process.nextTick
 error handling, reasource cleanup, retry request
+Timer queue
+--> one can use the setInterval or setTimeout functions
+callbacs in the microtass are eval before callbacs in the timer queue
+callbacs in the microtasks are excecuted between the callbacsk in the timer queue
 
 
 

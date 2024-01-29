@@ -216,5 +216,10 @@ start script helps developers understand the code by giving them somewhere to st
 Cluster Module
 --> one aplication might struggle whereby operations become CPU intensive
 --> cluster mudule was introduced to aid in the creation of worker modules
+The cluster is usually in charge of the workers
+The workers deal with inncoming reqests and file reading operations
+each worker gets its own event loop memory and v8 instance 
+we can only create as many workers as the amount of cores that the CPU is running
+scheduling too many cores can cause an overhead causing the system to restructure alocation of threads based on the number of cores
 
 

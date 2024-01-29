@@ -185,7 +185,34 @@ the timer queue is a heap data structure
 I/0 queue
 I/O polling
 The microtask que is usuallly executed in between the check queue callbacks
-
+close queue
+NPM
+--> largest software library
+- is a package or registry comprising code written by various devs
+-devs cn borrow and use code from it
+other package managers include pnmp and yarn
+was used for npm but has grow for the whole of js
+--> A software package manager
+p.json
+its the npm config file
+describes how to configure and interact with one's package
+pacakge.lock json keeps track of the packages installed in teh program
+the package.json dependencies helps keep track of the packages required to run the project. 
+Works in handy when one does not want to packakge node modules
+one can install a previous version if the current version is buggy
+SemVer --> semanting versioning describes how version numbers are given and incremented
+version numbers helped indicate what has changed from one version to the other
+Semver works in the X.Y.Z format
+X is the major version
+Y is the minor version
+Z is the Patch 
+versioning rules
+-> when u fix a bug and the code is backward compatible increase the patch number
+when you add functionality but the code is still backward compatible increase the minor version and reset the patch number
+When the code is changed such that it is not backword compatible change the major version number and reset the minor and patch numbers
+semantic versioning starts at 0.1.0
+when the code is production ready increase the version to 1.0.0
+start script helps developers understand the code by giving them somewhere to start with
 
 
 

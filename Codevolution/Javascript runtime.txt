@@ -184,6 +184,7 @@ setimeout are executed in a FIFO order with shortest excecuted first
 the timer queue is a heap data structure
 I/0 queue
 I/O polling
+The microtask que is usuallly executed in between the check queue callbacks
 
 
 

@@ -4,10 +4,13 @@ fs.readFile(__filename,()=>{
 })
 setTimeout(()=>{
 console.log("The set timeout")
-},10)
+},0)
 process.nextTick(()=>{
     console.log("process nextick")
 })
 Promise.resolve().then(()=>{
     console.log("The promise")
 })
+for(let i=0; i<200000000; i++){
+
+}

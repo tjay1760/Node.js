@@ -180,6 +180,10 @@ Timer queue
 --> one can use the setInterval or setTimeout functions
 callbacs in the microtass are eval before callbacs in the timer queue
 callbacs in the microtasks are excecuted between the callbacsk in the timer queue
+setimeout are executed in a FIFO order with shortest excecuted first
+the timer queue is a heap data structure
+I/0 queue
+
 
 
 

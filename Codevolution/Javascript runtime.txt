@@ -183,6 +183,7 @@ callbacs in the microtasks are excecuted between the callbacsk in the timer queu
 setimeout are executed in a FIFO order with shortest excecuted first
 the timer queue is a heap data structure
 I/0 queue
+I/O polling
 
 
 

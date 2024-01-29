@@ -11,6 +11,9 @@ process.nextTick(()=>{
 Promise.resolve().then(()=>{
     console.log("The promise")
 })
+setImmediate(()=>{
+    console.log("this is the set immidiate")
+})
 for(let i=0; i<200000000; i++){
 
 }

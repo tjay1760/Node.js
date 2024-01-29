@@ -213,6 +213,8 @@ When the code is changed such that it is not backword compatible change the majo
 semantic versioning starts at 0.1.0
 when the code is production ready increase the version to 1.0.0
 start script helps developers understand the code by giving them somewhere to start with
-
+Cluster Module
+--> one aplication might struggle whereby operations become CPU intensive
+--> cluster mudule was introduced to aid in the creation of worker modules
 
 

@@ -1,10 +1,13 @@
 {
-  "name": "custom-package",
+  "name": "codevolution-pokedex",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin":{
+    "codevolution-pokedex":"index.js"
   },
   "keywords": [],
   "author": "",

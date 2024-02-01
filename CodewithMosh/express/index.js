@@ -1,5 +1,6 @@
  const express = require('express');
  const app = express();
+ app.use(express.json())
  const people =[
     {
         id: 1,
@@ -22,6 +23,14 @@
  })
  app.get('/api/v1',(req,res)=>{
     res.send(people)
+ })
+ app.post('/api/v1',(req,res)=>{
+const person ={
+    id: people.length+1,
+    name: req.body.name
+}
+people.push(person);
+res.send(person)
  })
 
 app.get("/api/v1/:id",(req,res)=>{

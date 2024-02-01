@@ -1,14 +1,35 @@
  const express = require('express');
  const app = express();
+ const people =[
+    {
+        id: 1,
+        name:"John",
+    },
+    {
+        id: 2,
+        name:"Pete",
+    },
+      {
+        id: 3,
+        name:"Josh",
+      }  ,{
+        id: 4,
+        name:"Gary"
+      }
+ ]
  app.get('/',(req,res)=>{
-    res.send("Hi there")
+    res.send("Main")
  })
  app.get('/api/v1',(req,res)=>{
-    res.send([1,2,3])
+    res.send(people)
  })
 
 app.get("/api/v1/:id",(req,res)=>{
-    res.send(req.params)
+    const person = people.find(c=>c.id === parseInt(req.params.id))
+    if (!person){
+        res.status(404).send("person not available")
+    }
+    res.send(person)
 })
  //PORT
  port = process.env.PORT || 3000;

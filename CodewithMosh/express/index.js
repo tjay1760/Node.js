@@ -20,7 +20,7 @@ app.get('/api/v1', (req, res) => {
 
 app.post('/api/v1', (req, res) => {
     const schema = Joi.object({
-        name: Joi.string().min(3).required()
+        name: Joi.string().min(3).required(),
     });
 
     const result = schema.validate(req.body);
@@ -33,7 +33,7 @@ app.post('/api/v1', (req, res) => {
 
     const person = {
         id: people.length + 1,
-        name: req.body.name
+        name: req.body.name,
     };
 
     people.push(person);

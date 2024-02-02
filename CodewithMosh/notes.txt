@@ -1,0 +1,3 @@
+REST--> representation state transfer
+convention for building http services
+RESTful memthods include get post Put delete

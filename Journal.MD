@@ -9,3 +9,6 @@ Completed node JS course
 ## 30th January 2024
 Brush up some node.js
 Start Express course
+## 3rd FFebruary 2024
+Finished up express course
+Did 4 coding hours

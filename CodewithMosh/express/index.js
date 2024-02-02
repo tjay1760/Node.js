@@ -1,14 +1,22 @@
+const config = require('config')
 const Joi = require("joi");
 const express = require('express');
 const logger = require('./logger')
+const helmet = require('helmet')
+
+// Configuration
+console.log("Application Name :" + config.get('name'));
+console.log("Mail Server :" + config.get('mail.host'));
+console.log("Mail Password :" + config.get('mail.password'));
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
-
+app.use(helmet())
 app.use(logger)
 
+console.log(process.env.NODE_ENV)
 app.use((req,res,next)=>{
     console.log("Authenticating")
     next()

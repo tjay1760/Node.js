@@ -10,6 +10,9 @@ console.log("Mail Server :" + config.get('mail.host'));
 console.log("Mail Password :" + config.get('mail.password'));
 
 const app = express();
+
+app.set('view engine','pug');
+app.set('views','./views');
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
@@ -29,11 +32,11 @@ const people = [
 ];
 
 app.get('/', (req, res) => {
-    res.send("Main");
+    res.render('index',{title:'My Express app', message:"Hello"})
 });
 
 app.get('/api/v1', (req, res) => {
-    res.send(people);
+res.send(people)
 });
 
 app.post('/api/v1', (req, res) => {

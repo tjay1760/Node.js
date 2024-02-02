@@ -60,6 +60,16 @@ const result = validateCourse(req.body)
     person.name = req.body.name;
     res.send(person)
 })
+app.delete('/api/v1/:id',(req,res)=>{
+    const person = people.find(c => c.id === parseInt(req.params.id));
+    if (!person) {
+        res.status(404).send("Person not available");
+        return;
+    }
+    const index = people.indexOf(person)
+    people.splice(index,1)
+    res.send(person)
+})
 // PORT
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

@@ -12,3 +12,6 @@ Start Express course
 ## 3rd FFebruary 2024
 Finished up express course
 Did 4 coding hours
+## 4rth february
+Relax day
+## 5th February

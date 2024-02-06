@@ -1,7 +1,7 @@
 const getUser = (id)=>{
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            console.log("Reading user from DB")
+            console.log(`Reading user ${id} from DB`)
             resolve({id:id, username:"tjay"})
         })
     })
@@ -27,15 +27,5 @@ const getCommits = (repo)=>{
     })
 }
 
-
-console.log("Before");
-getUser(5,(user)=>{
-console.log(`The user ${user.id} is ${user.username}`)
-})
-getRepos("tjay",(repos)=>{
-repos.forEach(repo => {
-    console.log(`This is a ${repo}`)
-});
-})
-console.log("After");
-
+const user = getUser(5);
+user.then(e=>console.log(`the user is ${e.username} and his id in ${e.id}`))

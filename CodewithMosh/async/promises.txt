@@ -1,3 +1,5 @@
 Promise is an object that holds the result of an asynchronous operation.
 The object usually has three states
 Pending, fufilled and resolved states 
+Using async await one can write async code that loos lic synchronous code
+async aeait are syntatic sugar for promises

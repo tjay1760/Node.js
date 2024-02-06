@@ -26,13 +26,12 @@ const getCommits = (repo)=>{
         },2000)
     })
 }
-let val;
-getUser(6)
-.then(e=>getRepos(e.username)
-.then(getCommits("repo")
-.then(c=>{console.log(c) 
-val = c})))
-console.log(val)
-setTimeout(()=>{
-console.log(val)
-},7000)
+async function main(){
+    const user = await getUser(5);
+    const repos = await getRepos(user);
+    const commits = await getCommits(repos);
+    console.log(commits)    
+}
+
+main()
+

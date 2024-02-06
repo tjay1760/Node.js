@@ -26,6 +26,13 @@ const getCommits = (repo)=>{
         },2000)
     })
 }
-
-const user = getUser(5);
-user.then(e=>console.log(`the user is ${e.username} and his id in ${e.id}`))
+let val;
+getUser(6)
+.then(e=>getRepos(e.username)
+.then(getCommits("repo")
+.then(c=>{console.log(c) 
+val = c})))
+console.log(val)
+setTimeout(()=>{
+console.log(val)
+},7000)

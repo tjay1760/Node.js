@@ -1,12 +1,18 @@
-let res;
+
 const mypromise = new Promise((resolve,reject)=>{
     //Do asyc operattion here
 setTimeout(()=>{
+    console.log()
     resolve(1);
-        // reject(new Error())
 },2000)
 
-    // reject(new Error())
 })
-mypromise.then((result)=>{console.log(`The result is ${result}`); res=result}).catch(err=>console.log(`Your error ${err}`))
 
+const my2promise = new Promise((resolve,reject)=>{
+    //Do asyc operattion here
+setTimeout(()=>{
+    resolve(1);
+},2000)
+
+})
+Promise.all([mypromise,my2promise]).then(result=>(console.log(result)))

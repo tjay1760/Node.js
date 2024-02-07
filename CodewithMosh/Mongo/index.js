@@ -27,14 +27,14 @@ console.log(courses)
 // getCourses();
 
 async function updateCourse(id){
-const course = await Course.findById(id)
-if(!course) {
-    console.log("course not found")
-    return;
-}
-course.isPublished = true;
-course.author = "New author"
-const result = await course.save();
+const result = await Course.updateOne(
+    {_id:id},{
+        $set: {
+author: "Mr. Jayjay",
+isPublished:false
+        }
+    }
+)
 console.log(result)
 }
 updateCourse('65c2d822d60202c9ca17cbca')

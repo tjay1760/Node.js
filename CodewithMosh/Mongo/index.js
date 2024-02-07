@@ -12,8 +12,8 @@ const Course = mongoose.model('Course',courseSchema);
 
 async function createCourse(){
     const course = new Course({
-        // name:"REact native",
-        author:"Theologian",
+        name:"Svelte",
+        author:"Newman",
         tags:["front-end","javascript","DOM"],
         isPublished: true
     });
@@ -21,7 +21,7 @@ async function createCourse(){
         const result = await course.save();
         console.log(result)
     } catch (ex) {
-console.log(`\n-------${ex.message}-------\n`)
+console.log(`${ex.message}`)
     }
 
 }

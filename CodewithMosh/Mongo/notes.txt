@@ -1,0 +1,2 @@
+Mongoose is used for validation as mongodb does not have a validation feature 
+use mongoose for validating data saved to the database and joi for validating data sent to the api

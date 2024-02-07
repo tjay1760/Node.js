@@ -16,7 +16,7 @@ const Course = mongoose.model('Course',courseSchema);
 
 async function getCourses(){
     console.log("gettiing courses")
-    const courses = await Course.find({isPublished:true, tags:{$in: ['frontend', 'backend']}}).sort({price:-1}).select({name:1, author:1})
+const courses = await Course.find({name:/.*by.*/i, isPublished:true})
     console.log(courses)
 }
 getCourses()

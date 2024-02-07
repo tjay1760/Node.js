@@ -24,14 +24,17 @@ async function getCourses(){
 const courses = await Course.find({author:/^/})
 console.log(courses)
 }
-getCourses();
-// createCourse();
-// Mongo shortcuts
-// eq --> equal
-// ne --> not equal
-// gt --> greater than
-// gte --> gt than eq to
-// lt --> less than
-// lte --> less than equal to
-// in 
-// nin --> not in
+// getCourses();
+
+async function updateCourse(id){
+const course = await Course.findById(id)
+if(!course) {
+    console.log("course not found")
+    return;
+}
+course.isPublished = true;
+course.author = "New author"
+const result = await course.save();
+console.log(result)
+}
+updateCourse('65c2d822d60202c9ca17cbca')

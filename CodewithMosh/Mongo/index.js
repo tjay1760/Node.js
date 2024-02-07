@@ -6,16 +6,21 @@ const courseSchema = new mongoose.Schema({
     author:"string",
     tags:[String],
     date: {type:Date, default: Date.now()},
-    isPublished: Boolean
+    isPublished: Boolean,
+    price: {
+        type: Number,
+        required: function (){ return this.isPublished;}
+    }
 });
 const Course = mongoose.model('Course',courseSchema);
 
 async function createCourse(){
     const course = new Course({
-        name:"Svelte",
-        author:"Newman",
+        name:"Rails",
+        author:"baster",
         tags:["front-end","javascript","DOM"],
-        isPublished: true
+        isPublished: true,
+        price: 36
     });
     try{
         const result = await course.save();

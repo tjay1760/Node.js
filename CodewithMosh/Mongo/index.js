@@ -37,4 +37,10 @@ isPublished:false
 )
 console.log(result)
 }
-updateCourse('65c2d822d60202c9ca17cbca')
+async function removeCourse(id){
+    const result = await Course.deleteOne({
+        _id:id
+    })
+    console.log(result)
+}
+removeCourse('65c2d822d60202c9ca17cbca')

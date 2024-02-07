@@ -12,13 +12,18 @@ const Course = mongoose.model('Course',courseSchema);
 
 async function createCourse(){
     const course = new Course({
-        name:"REact native",
+        // name:"REact native",
         author:"Theologian",
         tags:["front-end","javascript","DOM"],
         isPublished: true
     });
-    const result = await course.save();
-    console.log(result)
+    try{
+        const result = await course.save();
+        console.log(result)
+    } catch (ex) {
+console.log(ex.message)
+    }
+
 }
 async function getCourses(){
 const courses = await Course.find({author:/^/})

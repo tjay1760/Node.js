@@ -14,7 +14,13 @@ const courseSchema = new mongoose.Schema({
  enum: ['web','mobile','network','os']
     },
     author:"string",
-    tags:[String],
+    tags:{
+type: Array,
+validate: {
+    validator: function (v){return v.length>0},
+},
+message: "Tags should not be an empty array"
+    },
     date: {type:Date, default: Date.now()},
     isPublished: Boolean,
     price: {
@@ -30,10 +36,10 @@ async function createCourse(){
     const course = new Course({
         name:"Rails",
         author:"baster",
-        tags:["front-end","javascript","DOM"],
+        // tags:[],
         category: "web",
         isPublished: true,
-        price: 365
+        price: 30
     });
     try{
         const result = await course.save();

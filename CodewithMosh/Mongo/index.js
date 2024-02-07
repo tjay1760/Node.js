@@ -21,7 +21,7 @@ async function createCourse(){
         const result = await course.save();
         console.log(result)
     } catch (ex) {
-console.log(ex.message)
+console.log(`\n-------${ex.message}-------\n`)
     }
 
 }

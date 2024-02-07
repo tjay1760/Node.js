@@ -21,7 +21,7 @@ async function createCourse(){
     console.log(result)
 }
 async function getCourses(){
-const courses = await Course.find({author:"Theo"}).select({name:1,tags:1});
+const courses = await Course.find({author:/^/})
 console.log(courses)
 }
 getCourses();

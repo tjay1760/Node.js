@@ -2,14 +2,26 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/playground')
 .then(()=>console.log("Connected to MMongodb Succesfully")).catch(err=>(console,log(`FAiled to connect:: ${err}`)))
 const courseSchema = new mongoose.Schema({
-    name:{type:String, required:true},
+    name:{
+        type:String, 
+        required:true,
+        minlength: 5,
+        maxlength: 25
+    },
+    category: {
+ type: String,
+ required: true,
+ enum: ['web','mobile','network','os']
+    },
     author:"string",
     tags:[String],
     date: {type:Date, default: Date.now()},
     isPublished: Boolean,
     price: {
         type: Number,
-        required: function (){ return this.isPublished;}
+        required: function (){ return this.isPublished;},
+        min: 20,
+        max: 100,
     }
 });
 const Course = mongoose.model('Course',courseSchema);
@@ -19,8 +31,9 @@ async function createCourse(){
         name:"Rails",
         author:"baster",
         tags:["front-end","javascript","DOM"],
+        category: "web",
         isPublished: true,
-        price: 36
+        price: 365
     });
     try{
         const result = await course.save();

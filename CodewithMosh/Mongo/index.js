@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/playground')
 .then(()=>console.log("Connected to MMongodb Succesfully")).catch(err=>(console,log(`FAiled to connect:: ${err}`)))
 const courseSchema = new mongoose.Schema({
-    name:"string",
+    name:{type:String, required:true},
     author:"string",
     tags:[String],
     date: {type:Date, default: Date.now()},
@@ -12,8 +12,8 @@ const Course = mongoose.model('Course',courseSchema);
 
 async function createCourse(){
     const course = new Course({
-        name:"REact",
-        author:"Theo",
+        name:"REact native",
+        author:"Theologian",
         tags:["front-end","javascript","DOM"],
         isPublished: true
     });
@@ -43,4 +43,4 @@ async function removeCourse(id){
     })
     console.log(result)
 }
-removeCourse('65c2d822d60202c9ca17cbca')
+createCourse()

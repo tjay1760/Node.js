@@ -26,3 +26,12 @@ console.log(courses)
 }
 getCourses();
 // createCourse();
+// Mongo shortcuts
+// eq --> equal
+// ne --> not equal
+// gt --> greater than
+// gte --> gt than eq to
+// lt --> less than
+// lte --> less than equal to
+// in 
+// nin --> not in

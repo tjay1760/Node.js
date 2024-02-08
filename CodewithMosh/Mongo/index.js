@@ -17,7 +17,13 @@ const courseSchema = new mongoose.Schema({
     tags:{
 type: Array,
 validate: {
-    validator: function (v){return v.length>0},
+    isAsync: true,
+    validator: function (v, callback){
+        setTimeout(()=>{
+            return v.length>0
+        })
+
+    },
 },
 message: "Tags should not be an empty array"
     },
